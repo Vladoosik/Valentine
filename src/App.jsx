@@ -51,8 +51,7 @@ function App() {
   }, [startDate]);
 
   const handleYesPress = async () => {
-    audioRef.current.valume = 0.5;
-    // audioRef.current.play();
+    audioRef.current.play();
     setActiveYes(true);
     setActiveGif(
       "https://www.anekdot.ru/i/caricatures/normal/24/3/15/1710505272.gif",
