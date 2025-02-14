@@ -1,0 +1,75 @@
+.main{
+
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dateContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description{
+  text-align: center;
+  padding: 0 12px 0 0;
+  font-size: 1.3em;
+}
+
+.date {
+  text-align: center;
+  font-size: 2em;
+  color: #002dda;
+}
+
+.loveText{
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0;
+  margin: 0 5px 0 0;
+}
+.title{
+  margin-top: 100px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.btnContainer{
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  min-width: 270px;
+  /*justify-content: space-between;*/
+  transition: 0.7s all ease;
+}
+
+.btnActiveContainer{
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  width: 270px;
+  justify-content: center;
+  transition: 0.7s all ease;
+  transition-delay: 5s;
+}
+
+.button{
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: white;
+  padding: 10px 20px;
+  font-size: 1.4em;
+}
