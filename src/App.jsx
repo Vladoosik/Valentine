@@ -4,8 +4,12 @@ import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import bear from "./assets/bear.gif";
 import music from "./assets/happy-happy-happpy-peter-griphin.mp3";
+import loveGif from "./assets/loveGif.gif";
+import happyCat from "./assets/happy-happy-happy-cat.gif";
+import loveStatisticGif from "./assets/loveStatistic-unscreen.gif";
 import CustomParticles from "./components/customParticles.jsx";
 import { motion } from "framer-motion";
+import sadBear from "./assets/sadBear.gif";
 import { AnimatedText } from "./components/animatedText.jsx";
 
 function App() {
@@ -53,13 +57,9 @@ function App() {
   const handleYesPress = async () => {
     audioRef.current.play();
     setActiveYes(true);
-    setActiveGif(
-      "https://www.anekdot.ru/i/caricatures/normal/24/3/15/1710505272.gif",
-    );
+    setActiveGif(happyCat);
     setTimeout(() => {
-      setActiveGif(
-        "https://99px.ru/sstorage/86/2019/07/image_861007190943094997610.gif",
-      );
+      setActiveGif(loveGif);
       setAnswer("Это Мыы ❤️");
     }, 5000);
   };
@@ -70,6 +70,7 @@ function App() {
     "Ты не пожалеешь",
   ];
   const handleReject = () => {
+    setActiveGif(sadBear);
     if (countNo + 1 >= question.length) {
       setCountNo(0);
     } else {
@@ -98,14 +99,7 @@ function App() {
                 {timeDifference.days} дней, {timeDifference.hours} часов,{" "}
                 {timeDifference.minutes} минут, {timeDifference.seconds} секунд
               </p>
-              <img
-                src={
-                  "https://giffun.ru/wp-content/uploads/2022/12/108c2257683620292f4687262f26e872.gif"
-                }
-                alt=""
-                width={350}
-                height={300}
-              />
+              <img src={loveStatisticGif} alt="" width={350} height={300} />
               <AnimatedText text={"Я люблю тебя"} className={"loveText"} />
             </div>
           ) : (
